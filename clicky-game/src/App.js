@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Container, Row, Col } from "./components/Grid";
+import Container from "./components/Container";
+import Wrapper from "./components/Wrapper";
 import Jumbotron from "./components/Jumbotron";
 import ImageCard from "./components/ImageCard";
 import cards from "./cards.json"
@@ -17,7 +18,7 @@ class App extends Component {
   resetGame = () => {
     // update topscore if applicable
     if (this.state.score > this.state.topscore) {
-      this.setState({ topscore: this.state.score }, function() {
+      this.setState({ topscore: this.state.score }, function () {
         console.log(this.state.topscore);
       });
     }
@@ -32,10 +33,10 @@ class App extends Component {
 
   clickCount = id => {
     this.state.cards.find((e, i) => {
-      if(e.id === id) {
-        if(cards[i].clicked === 0) {
+      if (e.id === id) {
+        if (cards[i].clicked === 0) {
           cards[i].clicked = 1;
-          this.setState({ score: this.state.score + 1 }, function() {
+          this.setState({ score: this.state.score + 1 }, function () {
             console.log(this.state.score);
           });
           this.state.cards.sort(() => Math.random() - 0.5)
@@ -50,16 +51,18 @@ class App extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Jumbotron score={this.state.score} topscore={this.state.topscore}/>
-        {this.state.cards.map(card => (
-          <ImageCard
-            clickCount={this.clickCount}
-            id={card.id}
-            image={card.image}
-            key={card.id}
-          />
-        ))}
+      <Container>
+        <Jumbotron score={this.state.score} topscore={this.state.topscore} />
+        <Wrapper>
+          {this.state.cards.map(card => (
+            <ImageCard
+              clickCount={this.clickCount}
+              id={card.id}
+              key={card.id}
+              image={card.image}
+            />
+          ))}
+        </Wrapper>
       </Container>
     );
   }

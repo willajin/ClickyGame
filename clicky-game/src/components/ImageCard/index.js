@@ -4,11 +4,13 @@ import "./index.css";
 
 function ImageCard(props) {
     return (
-        <div className="card" onClick={props.clickCount}>
-            <img className="card-img-top"
-                alt={props.name}
-                src={props.image}
-            />
+        <div className="card" onClick={() => props.clickCount(props.id)}>
+            <div className="img-container">
+                <img
+                    alt={props.name}
+                    src={props.image}
+                />
+            </div>
         </div>
     );
 }

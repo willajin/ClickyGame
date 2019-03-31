@@ -1,0 +1,13 @@
+.card {
+    height: 200px;
+    width: 200px;
+    margin: 2px;
+}
+
+.img-container {
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}

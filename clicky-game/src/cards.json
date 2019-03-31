@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "1",
-        "image": "",
+        "image": "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?cs=srgb&dl=animal-animal-photography-cat-104827.jpg&fm=jpg",
         "clicked": 0
     },
     {
         "id": 2,
         "name": "2",
-        "image": "",
+        "image": "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?cs=srgb&dl=animal-cat-face-close-up-416160.jpg&fm=jpg",
         "clicked": 0
     },
     {
