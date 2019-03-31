@@ -1,5 +1,26 @@
 .jumbotron {
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding-top: 50px;
+    background-color: transparent !important; 
+}
+
+.display-4 {
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: lowercase;
+    letter-spacing: 3px;
+}
+
+.lead {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+.scores {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
