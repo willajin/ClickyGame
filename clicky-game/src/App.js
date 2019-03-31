@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import Wrapper from "./components/Wrapper";
 import Jumbotron from "./components/Jumbotron";
 import ImageCard from "./components/ImageCard";
+import Footer from "./components/Footer";
 import cards from "./cards.json"
 import './App.css';
 
@@ -63,6 +64,9 @@ class App extends Component {
             />
           ))}
         </Wrapper>
+        <Footer>
+          Copyright | Willa Jin
+        </Footer>
       </Container>
     );
   }

@@ -1,0 +1,9 @@
+.footer {
+    width: 100%;
+    background-color: #fafafa;
+    padding: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+}
