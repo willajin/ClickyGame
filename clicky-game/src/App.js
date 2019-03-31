@@ -13,7 +13,8 @@ class App extends Component {
   state = {
     cards,
     score: 0,
-    topscore: 0
+    topscore: 0,
+    message: ""
   };
 
   resetGame = () => {
@@ -37,13 +38,14 @@ class App extends Component {
       if (e.id === id) {
         if (cards[i].clicked === 0) {
           cards[i].clicked = 1;
-          this.setState({ score: this.state.score + 1 }, function () {
+          this.setState({ score: this.state.score + 1, message: "Correct" }, function () {
             console.log(this.state.score);
           });
           this.state.cards.sort(() => Math.random() - 0.5)
           return true;
         }
         else {
+          this.setState({ message: "Incorrect" });
           this.resetGame();
         }
       }
@@ -53,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Jumbotron score={this.state.score} topscore={this.state.topscore} />
+        <Jumbotron score={this.state.score} topscore={this.state.topscore} message={this.state.message} />
         <Wrapper>
           {this.state.cards.map(card => (
             <ImageCard

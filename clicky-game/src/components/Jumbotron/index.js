@@ -11,6 +11,9 @@ function Jumbotron(props) {
             <div class="scores">
                 Score: {props.score} | Top Score: {props.topscore}
             </div>
+            <div class="message">
+                {props.message}
+            </div>
         </div>
     );
 }
